@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="us">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"></meta>
+<title>Cimri Product Search</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css"></link>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<link href="/css/jquery-ui.css" rel="stylesheet"></link>
+<script src="/js/jquery-ui.js"></script>
+<script type="text/javascript"
+src="/js/jquery.cascading-autocompletes.js"></script>
+<link rel="stylesheet" href="/css/style.css" type="text/css"></link>
+<link rel="stylesheet" href="/css/bootstrap-table.css"></link>
+
+<link rel="stylesheet" href="/css/font-awesome.css"></link>
+
+<link href="/css/jquery.growl.css" rel="stylesheet" type="text/css"></link>
+
+<script src="/js/highcharts.js"></script>
+<script src="/js/exporting.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="/js/bootstrap-table.js"></script>
+
+<script src="/js/jquery.growl.js"></script>
+
+	<script type="text/javascript" src="/js/custom.js">       
+      </script>
+
+
+</head>
+<body>
+	<div id="searchForm" class="searchFormClass">
+		<form class="form-inline">
+			<input id="category" type="text"
+				class="form-control mb-2 mr-sm-2 mb-sm-0"
+				placeholder="Enter category ..." /> <input id="brand" type="text"
+				class="form-control mb-2 mr-sm-2 mb-sm-0"
+				placeholder="Enter brand ..." /> <input id="title" type="text"
+				class="form-control mb-2 mr-sm-2 mb-sm-0"
+				placeholder="Enter what you search ..." /> <input type='hidden'
+				name='selectedProduct' id='selectedProduct' />
+		</form>
+	</div>
+	<div class="page-wrap">
+	<div id="productsDiv" class="table-responsive">
+			<div class="submitButtonClass">
+				<button id="search" type="button" class="btn btn-info">
+					<span class="glyphicon glyphicon-search"></span> Search
+				</button>
+				<button id="drawChart" type="submit" class="btn btn-primary">Draw
+					Chart</button>
+			</div>
+
+			<table id="productsTable" data-toggle="table" data-url=""
+				data-query-params="queryParams" data-show-pagination-switch="true"
+				data-pagination="true" data-search="true" data-height="300"
+				data-show-refresh="true" data-show-toggle="true"
+				data-show-columns="true">
+				<thead>
+					<tr class="clickable-row">
+						<th data-field="url">Selling Site</th>
+						<th data-field="productId">ID</th>
+						<th data-field="title">Name</th>
+						<th data-field="brand">Brand</th>
+						<th data-field="category">Category</th>
+					</tr>
+				</thead>
+			</table>
+			<input style="display: none;" name='tableSelectedProduct'
+				id='tableSelectedProduct' />
+		</div>
+
+
+
+
+
+
+		<!-- Modal -->
+		<div class="modal fade" id="showChartModal" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-body">
+						<div id="chartDiv"
+							style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+					</div>
+					<div class="modal-footer">
+						<button id="closeButton" type="button" class="btn btn-default"
+							data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+  <product_entity id="1" product_id="12345" category="Telefon"  brand="LG"/>
+  <product_entity id="2" product_id="3456" category="Kulaklık" brand="HEADPHONE"/>
+  <product_entity id="3" product_id="15151" category="Aksesuar" brand="SAMSUNG"/>
+  <product_entity id="4" product_id="66256" category="Modem" brand="ZYXEL"/>
+  <product_entity id="5" product_id="16161" category="telefon"  brand="SAMSUNG"/>
+  <product_entity id="6" product_id="72232" category="kulaklık" brand="SNOOPY"/>
+  <product_entity id="7" product_id="343423" category="aksesuar" brand="LG"/>
+  <product_entity id="8" product_id="45522" category="modem" brand="TTNET"/>
+</dataset>

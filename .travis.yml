@@ -1,0 +1,18 @@
+language: java
+
+jdk:
+  - oraclejdk8
+  
+cache:
+    directories:
+    - $HOME/.m2  
+
+branches:
+  only:
+  - master
+
+notifications:
+  email:
+  - enes.acikoglu@gmail.com
+
+script: mvn clean install
