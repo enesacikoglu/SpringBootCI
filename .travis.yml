@@ -10,6 +10,9 @@ cache:
 branches:
   only:
   - master
+  
+services:
+  - cassandra
 
 notifications:
   email:
