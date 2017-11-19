@@ -27,7 +27,7 @@
 		</File>
 	</Appenders>
 	<Loggers>
-		<Logger name="com.cimri" level="info" additivity="false">
+		<Logger name="com.cengenes" level="info" additivity="false">
 			<AppenderRef ref="App-File-Appender" />
 			<AppenderRef ref="Console-Appender" />
 		</Logger>
