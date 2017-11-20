@@ -19,7 +19,7 @@ import org.springframework.data.cassandra.repository.config.EnableCassandraRepos
  * @author Enes
  */
 @Configuration
-@EnableCassandraRepositories("com.cimri.challange.repository")
+@EnableCassandraRepositories("com.cengenes.challange.repository")
 public class CassandraConfig extends AbstractCassandraConfiguration {
 
 	@Autowired
@@ -38,7 +38,7 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
 	@Override
 	protected List<String> getStartupScripts() {
 
-		String script = "CREATE KEYSPACE IF NOT EXISTS cimriKeyspace " + "WITH durable_writes = true "
+		String script = "CREATE KEYSPACE IF NOT EXISTS cengenesKeyspace " + "WITH durable_writes = true "
 				+ "AND replication = { 'replication_factor' : 1, 'class' : 'SimpleStrategy' };";
 
 		String tableProduct = "CREATE TABLE IF NOT EXISTS Product (id text PRIMARY KEY,url text,priceOnDateMap map<text,text>);";
@@ -60,7 +60,7 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
 
 	@Override
 	public String[] getEntityBasePackages() {
-		return new String[] { "com.cimri.challange.entity" };
+		return new String[] { "com.cengenes.challange.entity" };
 	}
 
 	protected List<CreateKeyspaceSpecification> getKeyspaceCreations() {
