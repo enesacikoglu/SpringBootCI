@@ -105,7 +105,7 @@ $(function() {
 	jQuery('#drawChart').on('click', function(event) {    
 		 var drawChartURL=$('#tableSelectedProduct').val();
            if(drawChartURL!=""){   
-		    // drawProductChart(drawChartURL);
+	     drawProductChart(drawChartURL);
              $('#showChartModal').modal('show');
  
            }  
@@ -163,7 +163,7 @@ myChart.series[0].remove(true);
 		 
  function drawProductChart(drawChartURL){
  
-     $.getJSON('http://localhost:8080/api/product/findByProductUrl?url='+drawChartURL, function (data) {
+     $.getJSON('http://localhost:8080/api/product/chart/findByProductUrl?url='+drawChartURL, function (data) {
 		 var chartDataArr =[];
 		data.map(function (item) {
         var tempArr =[];
